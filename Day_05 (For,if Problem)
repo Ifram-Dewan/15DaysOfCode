@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int problems[4];
+    int target = 10;
+    int weeks_met_target = 0;
+
+    // Input the number of problems solved by Chef in each week
+    for (int i = 0; i < 4; ++i) {
+        cin >> problems[i];
+    }
+
+    // Count the number of weeks where Chef met the target
+    for (int i = 0; i < 4; ++i) {
+        if (problems[i] >= target) {
+            weeks_met_target++;
+        }
+    }
+
+    // Output the result
+    cout << weeks_met_target << endl;
+
+    return 0;
+}
