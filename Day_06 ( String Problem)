@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string findStringM(string S, string T) {
+    string M = "";
+    for (int i = 0; i < 5; i++) {
+        if (S[i] == T[i])
+            M += "G";
+        else
+            M += "B";
+    }
+    return M;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        string S, T;
+        cin >> S >> T;
+        string M = findStringM(S, T);
+        cout << M << endl;
+    }
+
+    return 0;
+}
