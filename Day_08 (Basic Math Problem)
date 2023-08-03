@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int X;
+        cin >> X;
+
+        int office_trips_per_week = 2 * X; // Chef goes to the office and returns home, so 2 trips per day.
+        int total_office_trips_in_week = office_trips_per_week * 5; // Chef works 5 days in a week.
+
+        cout << total_office_trips_in_week << endl;
+    }
+
+    return 0;
+}
