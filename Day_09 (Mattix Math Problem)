@@ -1,0 +1,34 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+    
+    int matrix[N+1][N+1];
+    for (int i = 1; i <= N; ++i) {
+        for (int j = 1; j <= N; ++j) {
+            cin >> matrix[i][j];
+        }
+    }
+    
+    int Q;
+    cin >> Q;
+    
+    while (Q--) {
+        int X1, Y1, X2, Y2;
+        cin >> X1 >> Y1 >> X2 >> Y2;
+        
+        set<int> distinctElements;
+        for (int i = X1; i <= X2; ++i) {
+            for (int j = Y1; j <= Y2; ++j) {
+                distinctElements.insert(matrix[i][j]);
+            }
+        }
+        
+        cout << distinctElements.size() << endl;
+    }
+    
+    return 0;
+}
