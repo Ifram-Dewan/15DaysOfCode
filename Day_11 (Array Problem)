@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t; // Number of test cases
+
+    while (t--) {
+        int n;
+        cin >> n; // Number of problems in the to-do list
+
+        vector<int> difficulties(n);
+
+        for (int i = 0; i < n; ++i) {
+            cin >> difficulties[i]; // Input difficulty ratings for each problem
+        }
+
+        int count = 0; // Counter for problems to be removed
+
+        for (int i = 0; i < n; ++i) {
+            if (difficulties[i] >= 1000) {
+                count++; // Count problems with difficulty rating greater than or equal to 1000
+            }
+        }
+
+        cout << count << endl; // Output the count of problems to be removed
+    }
+
+    return 0;
+}
