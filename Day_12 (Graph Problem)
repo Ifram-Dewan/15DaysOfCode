@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int N;
+    cin >> N;
+
+    for (int q = 0; q < N; ++q) {
+        int i, j;
+        cin >> i >> j;
+
+        int path_length = 0;
+        while (i != j) {
+            if (i > j)
+                i /= 2;
+            else
+                j /= 2;
+            ++path_length;
+        }
+
+        cout << path_length << endl;
+    }
+
+    return 0;
+}
